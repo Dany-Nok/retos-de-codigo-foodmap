@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Foodmap</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+<!--OJO: SE VISUALIZA CORRECTAMENTE EN VERSION MOBILE -->
+
+  <!-- SPLASH O "PRELOADER", PAGINA PREVIA -->
+    <div id="splash" class="col-xs-12 hidden-sm hidden-md">
+      <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+      <h1>Foodmap</h1>
+      <span class="sr-only">(Loading, please wait...)</span>
+    </div>
+
+  <!-- CABECERA DE PÁGINA -->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 hidden-sm hidden-md">
+            <h2 class="title">Foodmap</h2>
+            <div class="col-xs-12 hidden-sm hidden-md thin_line"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+  <!-- MAPA PARA UBICAR RESTAURANTES -->
+    <section class="restaurants_map">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 hidden-sm hidden-md map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53270.353610440376!2d-70.66266171237514!3d-33.43895937286783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c51c9c11dcaf%3A0xefdd258148ec6d32!2sFantasilandia!5e0!3m2!1ses-419!2scl!4v1512509290803" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="map"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- MENU DROPDOWN PARA BUSQUEDA FILTRADA -->
+    <section class="search_restaurants">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 hidden-sm hidden-md">
+            <h2>Comida cerca de Ti!</h2>
+            <br>
+
+          <div class="dropdown col-xs-12 hidden-sm hidden-md">
+              <button class="btn dropdown-toggle button-food" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Filtrar Restaurantes
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Comida Chilena</a></li>
+                <li><a href="#">Comida Internacional</a></li>
+                <li><a href="#">Rango Precio (Menor a Mayor)</a></li>
+                <li><a href="#">Rango Precio (Mayor a Menor)</a></li>
+                <li><a href="#">Delivery</a></li>
+                <li><a href="#">Pago con Tarjeta</a></li>
+              </ul>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- FOTOS ALGUNOS PLATOS DE COMIDA -->
+    <section class="food_pics">
+      <div class="container">
+        <div class="row">
+        <!-- IMAGEN CON DESCRIPCION -->
+          <div class="col-xs-12 img-outer">
+            <div class="hovereffect">
+              <div class="z-text">
+                <h3>"La Comida de la Mami es rica!"</h3>
+                <button type="button" class="btn button-food" href="#descripcion-mami" data-toggle="modal">Más Info</button>
+              </div>
+              <div class="z-img">
+                <img class="img-responsive foods" src="assets/img/carne-con-arroz.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- MODAL -->
+          <div class="modal fade" id="descripcion-mami" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">La Comida de la Mami es rica!</h4>
+                </div>
+
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53270.353610440376!2d-70.66266171237514!3d-33.43895937286783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c51c9c11dcaf%3A0xefdd258148ec6d32!2sFantasilandia!5e0!3m2!1ses-419!2scl!4v1512509290803" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="map_modal"></iframe>
+                      <p class="subtitle-modal">Comida casera de la mamita</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Av. Hogareña 1234</li>
+                        <li>Cel.: +569 99999999</li>
+                        <li>Ciudad Algodón</li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Precios ($)</li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Delivery</li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Pago con Tarjeta</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn button-food">Pedir Ahora</button>
+                </div>
+              </div>
+            </div>
+          </div> 
+        <!-- IMAGEN CON DESCRIPCION -->
+          <div class="col-xs-12 img-outer">
+            <div class="hovereffect">
+              <div class="z-text">
+                <h3>"EL Sangurucho"</h3>
+                <button type="button" class="btn button-food" href="#descripcion-sangurucho" data-toggle="modal">Más Info</button>
+              </div>
+              <div class="z-img">
+                <img class="img-responsive foods" src="assets/img/chacarero.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        <!-- MODAL -->
+          <div class="modal fade" id="descripcion-sangurucho" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">EL Sangurucho</h4>
+                </div>
+
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53270.353610440376!2d-70.66266171237514!3d-33.43895937286783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c51c9c11dcaf%3A0xefdd258148ec6d32!2sFantasilandia!5e0!3m2!1ses-419!2scl!4v1512509290803" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="map_modal"></iframe>
+                      <p class="subtitle-modal">Sandwiches monstruosos y sabrosos!</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Av. Groar 567</li>
+                        <li>Cel.: +569 22222222</li>
+                        <li>Villa del Susto</li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Precios ($)</li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Delivery</li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Pago con Tarjeta</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn button-food">Pedir Ahora</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- IMAGEN CON DESCRIPCION -->
+          <div class="col-xs-12 img-outer">
+            <div class="hovereffect">
+              <div class="z-text">
+                <h3>"Aló con Palito"</h3>
+                <button type="button" class="btn button-food" href="#descripcion-alos" data-toggle="modal">Más Info</button>
+              </div>
+              <div class="z-img">
+                <img class="img-responsive foods" src="assets/img/comida-china.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        <!-- MODAL -->
+          <div class="modal fade" id="descripcion-alos" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">Aló con Palito</h4>
+                </div>
+
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53270.353610440376!2d-70.66266171237514!3d-33.43895937286783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c51c9c11dcaf%3A0xefdd258148ec6d32!2sFantasilandia!5e0!3m2!1ses-419!2scl!4v1512509290803" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="map_modal"></iframe>
+                      <p class="subtitle-modal">Crítica del Gran Master Chef Yuhui: "Lico, lico"</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Los chinos esq. Los Orientales</li>
+                        <li>Cel.: +569 55555555</li>
+                        <li>China Town Cl</li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Precios ($$$$$)</li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Delivery</li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Pago con Tarjeta</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn button-food">Pedir Ahora</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- IMAGEN CON DESCRIPCION -->
+          <div class="col-xs-12 img-outer">
+            <div class="hovereffect">
+              <div class="z-text">
+                <h3>"Sopita de Tomacco"</h3>
+                <button type="button" class="btn button-food" href="#descripcion-sopita" data-toggle="modal">Más Info</button>
+              </div>
+              <div class="z-img">
+                <img class="img-responsive foods" src="assets/img/crema-tomate.png" alt="">
+              </div>
+            </div>
+          </div>
+        <!-- MODAL -->
+          <div class="modal fade" id="descripcion-sopita" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">Sopita de Tomacco</h4>
+                </div>
+
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53270.353610440376!2d-70.66266171237514!3d-33.43895937286783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c51c9c11dcaf%3A0xefdd258148ec6d32!2sFantasilandia!5e0!3m2!1ses-419!2scl!4v1512509290803" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="map_modal"></iframe>
+                      <p class="subtitle-modal">Fuerte sabor y cuerpo, ligeramente adictivas</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Granja Los Simpsons, Camino Rural 9</li>
+                        <li>Cel.: +569 88888888</li>
+                        <li>Springfield</li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Precios ($$$$$)</li>
+                        <li><i class="fa fa-window-close-o" aria-hidden="true"></i> Delivery</li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Pago con Tarjeta</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn button-food">Pedir Ahora</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- IMAGEN CON DESCRIPCION -->
+          <div class="col-xs-12 img-outer">
+            <div class="hovereffect">
+              <div class="z-text">
+                <h3>"Empanadas de Rescoldo"</h3>
+                <button type="button" class="btn button-food" href="#descripcion-empanadas" data-toggle="modal">Más Info</button>
+              </div>
+              <div class="z-img">
+                <img class="img-responsive foods" src="assets/img/empanadas.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        <!-- MODAL -->
+          <div class="modal fade" id="descripcion-empanadas" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">Empanadas de Rescoldo</h4>
+                </div>
+
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53270.353610440376!2d-70.66266171237514!3d-33.43895937286783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c51c9c11dcaf%3A0xefdd258148ec6d32!2sFantasilandia!5e0!3m2!1ses-419!2scl!4v1512509290803" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="map_modal"></iframe>
+                      <p class="subtitle-modal">Tan ricas como para decir "Uyui!"</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Camino a Laar, Parcela 68</li>
+                        <li>Cel.: +569 33333333</li>
+                        <li>Donde el Diablo Perdió el Poncho</li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Precios ($)</li>
+                        <li><i class="fa fa-window-close-o" aria-hidden="true"></i> Delivery</li>
+                        <li><i class="fa fa-window-close-o" aria-hidden="true"></i> Pago con Tarjeta</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn button-food">Pedir Ahora</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- IMAGEN CON DESCRIPCION -->
+          <div class="col-xs-12 img-outer">
+            <div class="hovereffect">
+              <div class="z-text">
+                <h3>"Se me derritió el helado!"</h3>
+                <button type="button" class="btn button-food" href="#descripcion-helado" data-toggle="modal">Más Info</button>
+              </div>
+              <div class="z-img">
+                <img class="img-responsive foods" src="assets/img/helado.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        <!-- MODAL -->
+          <div class="modal fade" id="descripcion-helado" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">Se me derritió el helado!</h4>
+                </div>
+
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53270.353610440376!2d-70.66266171237514!3d-33.43895937286783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c51c9c11dcaf%3A0xefdd258148ec6d32!2sFantasilandia!5e0!3m2!1ses-419!2scl!4v1512509290803" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="map_modal"></iframe>
+                      <p class="subtitle-modal">Helados de calidad</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Av. Fifí N° 321</li>
+                        <li>Cel.: +569 77777777</li>
+                        <li>Villa Oh La Lá</li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Precios ($)</li>
+                        <li><i class="fa fa-window-close-o" aria-hidden="true"></i> Delivery</li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Pago con Tarjeta</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn button-food">Pedir Ahora</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- IMAGEN CON DESCRIPCION -->
+          <div class="col-xs-12 img-outer">
+            <div class="hovereffect">
+              <div class="z-text">
+                <h3>"Sushi-tu-male"</h3>
+                <button type="button" class="btn button-food" href="#descripcion-sushi" data-toggle="modal">Más Info</button>
+              </div>
+              <div class="z-img">
+                <img class="img-responsive foods" src="assets/img/sushito.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        <!-- MODAL -->
+          <div class="modal fade" id="descripcion-sushi" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">Sushi-tu-male</h4>
+                </div>
+
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53270.353610440376!2d-70.66266171237514!3d-33.43895937286783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c51c9c11dcaf%3A0xefdd258148ec6d32!2sFantasilandia!5e0!3m2!1ses-419!2scl!4v1512509290803" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="map_modal"></iframe>
+                      <p class="subtitle-modal">Si come nuestro sushi, no es marginal</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Calle Nipona N° 888</li>
+                        <li>Cel.: +569 66666666</li>
+                        <li>Barrio Japonés</li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Precios ($$$$$)</li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Delivery</li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Pago con Tarjeta</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn button-food">Pedir Ahora</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- IMAGEN CON DESCRIPCION -->
+          <div class="col-xs-12 img-outer">
+            <div class="hovereffect">
+              <div class="z-text">
+                <h3>"Bomboncitos y Pastelazos"</h3>
+                <button type="button" class="btn button-food" href="#descripcion-pastelazos" data-toggle="modal">Más Info</button>
+              </div>
+              <div class="z-img">
+                <img class="img-responsive foods" src="assets/img/tortita.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        <!-- MODAL -->
+          <div class="modal fade" id="descripcion-pastelazos" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">Bomboncitos y Pastelazos</h4>
+                </div>
+
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53270.353610440376!2d-70.66266171237514!3d-33.43895937286783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c51c9c11dcaf%3A0xefdd258148ec6d32!2sFantasilandia!5e0!3m2!1ses-419!2scl!4v1512509290803" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="map_modal"></iframe>
+                      <p class="subtitle-modal">Porque hay "pasteles"...y PASTELES</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Av. Diabetes Mellitus, Pasaje 1</li>
+                        <li>Cel.: +569 99999999</li>
+                        <li>Villa Dulce</li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Precios ($)</li>
+                        <li><i class="fa fa-window-close-o" aria-hidden="true"></i> Delivery</li>
+                        <li><i class="fa fa-window-close-o" aria-hidden="true"></i> Pago con Tarjeta</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn button-food">Pedir Ahora</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- IMAGEN CON DESCRIPCION -->
+          <div class="col-xs-12 img-outer">
+            <div class="hovereffect">
+              <div class="z-text">
+                <h3>"The-(W)rap-Man"</h3>
+                <button type="button" class="btn button-food" href="#descripcion-wrapman" data-toggle="modal">Más Info</button>
+              </div>
+              <div class="z-img">
+                <img class="img-responsive foods" src="assets/img/wraps.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        <!-- MODAL -->
+          <div class="modal fade" id="descripcion-wrapman" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">The-(W)rap-Man</h4>
+                </div>
+
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53270.353610440376!2d-70.66266171237514!3d-33.43895937286783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c51c9c11dcaf%3A0xefdd258148ec6d32!2sFantasilandia!5e0!3m2!1ses-419!2scl!4v1512509290803" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="map_modal"></iframe>
+                      <p class="subtitle-modal">Los wraps más wrapidos de la ciudad!</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Calle Sana esq. Chatarra</li>
+                        <li>Cel.: +569 44444444</li>
+                        <li>Barrio Diente Largo</li>
+                      </ul>
+                    </div>
+                    <div class="col-xs-6">
+                      <ul class="list-modal">
+                        <li>Precios ($)</li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Delivery</li>
+                        <li><i class="fa fa-check-square-o" aria-hidden="true"></i> Pago con Tarjeta</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn button-food">Pedir Ahora</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- PIE DE PÁGINA -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 hidden-sm hidden-md">
+            <p>Foodmap - <i class="fa fa-copyright" aria-hidden="true"></i> Laboratoria 2017</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>

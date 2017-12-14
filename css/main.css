@@ -1,0 +1,124 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  background-color: black;
+}
+
+/* ESTILOS DE SPLASH */
+#splash{
+  display: block;
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  bottom:0;
+  max-width: 100%;
+  background-color: black;
+  z-index: 10;
+}
+
+#splash .fa-fw{
+  color: orange;
+  margin: 50% 37% 0 37%;
+}
+
+#splash h1{
+  color: orange;
+  font-size: 4em;
+  text-align: center;
+}
+
+/* ESTILOS DE PAGINA */
+h1, h2{
+  color: orange;
+  text-align: center;
+}
+
+.title {
+  font-size: 4em;
+}
+
+.thin_line{
+  content: " ";
+  width: 100%;
+  background-color: white;
+}
+
+/* MAPA */
+.map{
+  width: 100%;
+  padding: 2%;
+}
+
+/* FOTOS DE COMIDA */
+.foods{
+  padding: 1.5%;
+}
+
+/* EFECTO MOUSEOVER FOTOS COMIDA */
+.hovereffect{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  transition: all 3s ease 0s;
+}
+
+.z-img{
+  position: relative;
+}
+
+.z-img img{
+  transition: all 0.6s ease 0s;
+}
+.hovereffect:hover .z-img img{
+  opacity: 0.3;
+}
+.z-text{
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 13%;
+  z-index: 1000;
+  display: none;
+  color: orange;
+  text-align: center;
+}
+
+.z-text h3{
+  font-size: 1.75em;
+}
+
+.button-food{
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+/* EFECTOS MODAL COMIDAS */
+.map_modal{
+  max-width: 100%;
+  padding: 2% 10%;
+}
+
+.subtitle-modal{
+  color: orange;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+.list-modal li{
+  list-style: none;
+  margin-left: 2%;
+}
+
+footer{
+  color: white;
+  text-align: center;
+  padding: 1% 0;
+}
